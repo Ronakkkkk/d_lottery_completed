@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: UNLICENSED
 
-pragma solidity ^0.8.17;
+pragma solidity ^0.8.18;
 
 // We first import some OpenZeppelin Contracts.
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
@@ -37,6 +37,13 @@ contract MyEpicNFT is ERC721 {
   // Set the NFT's metadata
   function tokenURI(uint256 _tokenId) public view override returns (string memory) {
     require(_exists(_tokenId));
-    return "blah";
+    console.log("An NFT w/ ID %s has been minted to %s", _tokenId, msg.sender);
+    return "https://jsonkeeper.com/b/YEKW";
+    
   }
 }
+
+
+
+
+
