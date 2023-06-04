@@ -6,9 +6,9 @@ module.exports = {
   networks: {
     hardhat: {},
     sepolia: {
-      
-      url: process.env.QUICKNODE_API_KEY_URL,
-      accounts: [process.env.GOERLI_PRIVATE_KEY], 
+      url: 'https://late-compatible-dinghy.ethereum-sepolia.discover.quiknode.pro/39b833323efb6b25ae9617be5dcc3f0dda4fa00b/',
+      accounts: ['3c4577ae5a08e4862fbb8113e44f29b14d1890f5ecfc89cfd92a044705a70513'], 
     }
   },
 };
+
