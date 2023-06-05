@@ -22,7 +22,7 @@ contract MyEpicNFT is ERC721URIStorage {
   // I create three arrays, each with their own theme of random words.
   // Pick some random funny words, names of anime characters, foods you like, whatever! 
   string[] firstWords = ["Fantastic", "Epic", "Great", "Terrible", "Crazy", "Wild", "Spooky", "Dense","Scary","Terrifying", "Goofy", "Charming"];
-  string[] secondWords = ["Cupcake", "Pizza", "Noodles", "Chicken", "Curry", "Sandwich", "Salad", "MoMo", "Biryani", "ChauChau" "Thakali", "Burger"];
+  string[] secondWords = ["Cupcake", "Pizza", "Noodles", "Chicken", "Curry", "Sandwich", "Salad", "MoMo", "Biryani", "ChauChau" "Thakali", "Burger", "Pasta"];
   string[] thirdWords = ["Thor", "Hulk", "Rocket", "Groot", "Gamora", "Nebula", "Drax", "Mantis", "Tony", "Quill", "Rogers", "Wasp", "Strange", "Wanda"];
 
   constructor() ERC721 ("SquareNFT", "SQUARE") {
