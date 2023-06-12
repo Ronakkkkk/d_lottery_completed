@@ -9,5 +9,10 @@ module.exports = {
       accounts: [process.env.GOERLI_PRIVATE_KEY],
     },
   },
+  etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: process.env.etherscan_API_KEY,
+  }
 };
 
