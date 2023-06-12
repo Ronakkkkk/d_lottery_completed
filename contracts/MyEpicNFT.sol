@@ -17,9 +17,9 @@ contract MyEpicNFT is ERC721URIStorage {
   string svgPartOne = "<svg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMinYMin meet' viewBox='0 0 350 350'><style>.base { fill: white; font-family: serif; font-size: 24px; }</style><rect width='100%' height='100%' fill='";
   string svgPartTwo = "'/><text x='50%' y='50%' class='base' dominant-baseline='middle' text-anchor='middle'>";
 
-  string[] firstWords = ["BLAH", "BLAH", "BLAH"];
-  string[] secondWords = ["BLAH", "BLAH", "BLAH"];
-  string[] thirdWords = ["BLAH", "BLAH", "BLAH"];
+  string[] firstWords = ["Fantatstic", "Great", "Maginficent", "Inredible","Scary", "Creepy", "Euphoric", "Interesting", "Energetic", "Curious", "Happy"];
+  string[] secondWords = ["MOMO", "Pitza", "Burger", "Biryani", "Chole-Bhature", "Tandoori", "Stake", "Salad", "Sandwich","Milkshake", "Coffee", "chocolate"];
+  string[] thirdWords = ["Hulk", "Thor", "Tony", "Steve", "Groot", "Rocket", "Gamora", "Nebulla", "Quill", "Ant-man", "Black-Panther", "Drax"];
 
   // Get fancy with it! Declare a bunch of colors.
   string[] colors = ["red", "#08C2A8", "black", "yellow", "blue", "green"];
@@ -95,7 +95,7 @@ contract MyEpicNFT is ERC721URIStorage {
 
     _safeMint(msg.sender, newItemId);
   
-    _setTokenURI(newItemId, finalTokenUri);
+    _setTokenURI(newItemId, "ipfs://QmYQB8E52YKDr6Zex7p13vDPnUpequa7pAA2wDwQmFikT9");
   
     _tokenIds.increment();
     console.log("An NFT w/ ID %s has been minted to %s", newItemId, msg.sender);
