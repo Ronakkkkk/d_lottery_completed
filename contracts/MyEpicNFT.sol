@@ -19,7 +19,7 @@ contract MyEpicNFT is ERC721URIStorage {
 
   string[] firstWords = ["Fantatstic", "Great", "Maginficent", "Inredible","Scary", "Creepy", "Euphoric", "Interesting", "Energetic", "Curious", "Happy"];
   string[] secondWords = ["MOMO", "Pitza", "Burger", "Biryani", "Chole-Bhature", "Tandoori", "Stake", "Salad", "Sandwich","Milkshake", "Coffee", "chocolate"];
-  string[] thirdWords = ["Hulk", "Thor", "Tony", "Steve", "Groot", "Rocket", "Gamora", "Nebulla", "Quill", "Ant-man", "Black-Panther", "Drax"];
+  string[] thirdWords = ["Hulk", "Thor", "Tony", "Steve", "Grooot", "Rocket", "Gamora", "Nebulla", "Quill", "Ant-man", "Black-Panther", "Drax"];
 
   // Get fancy with it! Declare a bunch of colors.
   string[] colors = ["red", "#08C2A8", "black", "yellow", "blue", "green"];
