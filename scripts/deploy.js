@@ -1,16 +1,20 @@
 const main = async () => {
-    const nftContractFactory = await hre.ethers.getContractFactory('MyEpicNFT');
-    const nftContract = await nftContractFactory.deploy();
-    await nftContract.deployed();
-    console.log("Contract deployed to:", nftContract.address);
-  
-    // Call the function.
-    let txn = await nftContract.makeAnEpicNFT()
-    // Wait for it to be mined.
-    await txn.wait()
-    console.log("Minted NFT #1")
-  
-   
+  const [deployer] = await hre.ethers.getSigners();
+  const accountBalance = await deployer.getBalance();
+  console.log("Deploying contracts with account: ", deployer.address);
+  console.log("Account balance: ", accountBalance.toString());
+  const lottryContractFactory = await hre.ethers.getContractFactory("DecentralizedLottery");
+  const minimumBet = ethers.utils.parseEther("0");
+  const durationInBlocks = 10;
+  const lotterycontract = await lottryContractFactory.deploy(minimumBet, durationInBlocks, {
+    value: ethers.utils.parseEther("0.001")
+  });
+  await lotterycontract.deployed();
+  console.log("Contract addy:", lotterycontract.address);
+  const enterTxn = await lotterycontract.enterLottery();
+  await enterTxn.wait();
+  const pickWinnerTxn = await lotterycontract.pickWinner();
+  await pickWinnerTxn.wait();
   };
   
   const runMain = async () => {
