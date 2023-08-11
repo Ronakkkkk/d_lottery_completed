@@ -13,8 +13,7 @@ const main = async () => {
   console.log("Contract addy:", lotterycontract.address);
   const enterTxn = await lotterycontract.enterLottery();
   await enterTxn.wait();
-  const pickWinnerTxn = await lotterycontract.pickWinner();
-  await pickWinnerTxn.wait();
+  
   };
   
   const runMain = async () => {
