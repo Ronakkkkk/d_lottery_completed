@@ -9,6 +9,7 @@ contract DecentralizedLottery {
     uint256 public lotteryEnd;
     uint256 private seed;
     event WinnerSelected(address winner);
+    event PlayerEntered(address player);
     constructor(uint256 _minimumbet,uint256 _durationInBlocks) payable {
         manager=msg.sender;
         minimumbet=_minimumbet;
@@ -21,6 +22,8 @@ require(msg.value>=minimumbet, "Insufficinet Bet ammount");
 require(block.number<lotteryEnd,"Lottery has ended");
 
 players.push(msg.sender);
+emit PlayerEntered(msg.sender);
+
 console.log("%s entered", msg.sender);
         
     }
